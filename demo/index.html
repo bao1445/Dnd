@@ -1,60 +1,71 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv='content-type' content='text/html; charset=utf-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge' >
-    <META NAME='Description' content='Pan and zoom svg elements demo '>
-    <meta name='keywords' content='svg, pan, zoom' />
-    <meta name='author' content='Andrei Kashcha'>
-    <meta name='title' content='SVG panzoom demo' />
-    <title>SVG panzoom demo</title>
-    <style type="text/css" media="screen">
-body, html {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-}
-svg {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.header, .footer{
-  position: absolute;
-  padding: 10px;
-  margin: 0;
-  background: rgba(255, 255, 255, 0.4);
-}
-.header {
-  color: rgba(0, 0, 0, 0.82);
-}
-a {
-  color: #FF4081;
-  text-decoration: none;
-}
 
-.footer {
-  bottom: 10px;
-  color: rgba(0, 0, 0, 0.52);
-}
-    </style>
-  </head>
-  <body>
-    <svg> <g id='zoomable' transform="matrix(0.8 0 0 0.8 285.10089111328125 318.6616516113281)"> <g>
-      <image xlink:href="./demo/RumourMap_HTML_release.svg" data-asin="078974984X" width="95%" height="95%"></image>
-    </svg>
-    <p class='header'>
-      Drag it or zoom it...
-    </p>
-    <script src='../dist/panzoom.js'></script>
-    <script>
-var area = document.getElementById('zoomable')
-window.pz = panzoom(area, {autocenter: true, bounds: true})
-    </script>
-  </body>
+<head>
+  <meta http-equiv='content-type' content='text/html; charset=utf-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <META NAME='Description' content='Pan and zoom svg elements demo '>
+  <meta name='keywords' content='svg, pan, zoom' />
+  <meta name='author' content='Andrei Kashcha'>
+  <meta name='title' content='Team FTJ Rumour Map' />
+  <title>Team FTJ Rumour Map</title>
+  <style type="text/css" media="screen">
+    body,
+    html {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .header,
+    .footer {
+      position: absolute;
+      padding: 10px;
+      margin: 0;
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    .header {
+      color: rgba(0, 0, 0, 0.82);
+    }
+
+    a {
+      color: #FF4081;
+      text-decoration: none;
+    }
+
+    .footer {
+      bottom: 10px;
+      color: rgba(0, 0, 0, 0.52);
+    }
+  </style>
+</head>
+
+<body>
+  <svg>
+    <g id='zoomable' transform="matrix(0.8 0 0 0.8 285.10089111328125 318.6616516113281)">
+      <g>
+        <image xlink:href="./demo/RumourMap_HTML_release.svg" data-asin="078974984X" width="95%" height="95%"></image>
+  </svg>
+  <p class='header'>
+    Drag it or zoom it...
+  </p>
+  <script src='../dist/panzoom.js'></script>
+  <script>
+    var area = document.getElementById('zoomable')
+    window.pz = panzoom(area, { autocenter: true, bounds: true })
+  </script>
+</body>
+
 </html>
